@@ -46,7 +46,7 @@ int main(void)
 
     fd = socket(PF_INET, SOCK_STREAM, SHOULD_IPPROTO_SCTP);
 
-    if (fd <= 0) {
+    if (fd < 0) {
 	perror("checksctp");
 	exit(1);
     } else {
